@@ -48,13 +48,13 @@
       </assignedAuthoringDevice>
       <representedOrganization>
         <id nullFlavor="NA"/>
-        <name>${preferredAmbulatoryProvider.attributes.name}</name>
+        <name><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.name}<#else>MISSING</#if></name>
         <telecom nullFlavor="NA"/>
         <addr>
-          <streetAddressLine>${preferredAmbulatoryProvider.attributes.address}</streetAddressLine>
-          <city>${preferredAmbulatoryProvider.attributes.city}</city>
-          <state>${preferredAmbulatoryProvider.attributes.state}</state>
-          <postalCode>${preferredAmbulatoryProvider.attributes.city_zip}</postalCode>
+          <streetAddressLine><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.address}<#else>MISSING</#if></streetAddressLine>
+          <city><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.city}<#else>MISSING</#if></city>
+          <state><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.state}<#else>MISSING</#if></state>
+          <postalCode><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.city_zip}<#else>MISSING</#if></postalCode>
         </addr>
       </representedOrganization>
     </assignedAuthor>
@@ -63,13 +63,13 @@
     <assignedCustodian>
       <representedCustodianOrganization>
         <id nullFlavor="NA"/>
-        <name>${preferredAmbulatoryProvider.attributes.name}</name>
+        <name><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.name}<#else>MISSING</#if></name>
         <telecom nullFlavor="NA"/>
         <addr>
-          <streetAddressLine>${preferredAmbulatoryProvider.attributes.address}</streetAddressLine>
-          <city>${preferredAmbulatoryProvider.attributes.city}</city>
-          <state>${preferredAmbulatoryProvider.attributes.state}</state>
-          <postalCode>${preferredAmbulatoryProvider.attributes.city_zip}</postalCode>
+          <streetAddressLine><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.address}<#else>MISSING</#if></streetAddressLine>
+          <city><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.city}<#else>MISSING</#if></city>
+          <state><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.state}<#else>MISSING</#if></state>
+          <postalCode><#if preferredAmbulatoryProvider??>${preferredAmbulatoryProvider.attributes.city_zip}<#else>MISSING</#if></postalCode>
         </addr>
       </representedCustodianOrganization>
     </assignedCustodian>

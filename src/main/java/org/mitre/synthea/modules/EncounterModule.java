@@ -57,8 +57,6 @@ public final class EncounterModule extends Module {
     }
 
     if (startedEncounter) {
-      CardiovascularDiseaseModule.performEncounter(person, time);
-      Immunizations.performEncounter(person, time);
     }
 
     // java modules will never "finish"
@@ -98,7 +96,6 @@ public final class EncounterModule extends Module {
 
       event.processed = true;
 
-      CardiovascularDiseaseModule.performEmergency(person, time, event.type);
 
     }
   }

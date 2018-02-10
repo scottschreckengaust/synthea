@@ -22,10 +22,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.mitre.synthea.modules.CardiovascularDiseaseModule;
 import org.mitre.synthea.modules.DeathModule;
 import org.mitre.synthea.modules.EncounterModule;
-import org.mitre.synthea.modules.Immunizations;
 import org.mitre.synthea.modules.LifecycleModule;
 import org.mitre.synthea.world.concepts.HealthRecord.Code;
 
@@ -74,11 +72,9 @@ public class Concepts {
           }
         });
 
-    inventoryCodes(concepts, CardiovascularDiseaseModule.getAllCodes());
     inventoryCodes(concepts, DeathModule.getAllCodes());
     inventoryCodes(concepts, EncounterModule.getAllCodes());
     // HealthInsuranceModule has no codes
-    inventoryCodes(concepts, Immunizations.getAllCodes());
     inventoryCodes(concepts, LifecycleModule.getAllCodes());
     // QualityOfLifeModule adds no new codes to patients
     
