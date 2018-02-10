@@ -21,11 +21,9 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 
-import org.mitre.synthea.modules.CardiovascularDiseaseModule;
 import org.mitre.synthea.modules.EncounterModule;
 import org.mitre.synthea.modules.HealthInsuranceModule;
 import org.mitre.synthea.modules.LifecycleModule;
-import org.mitre.synthea.modules.QualityOfLifeModule;
 import org.mitre.synthea.world.agents.Person;
 
 /**
@@ -44,8 +42,6 @@ public class Module {
     Map<String, Module> retVal = new ConcurrentHashMap<String, Module>();
 
     retVal.put("Lifecycle", new LifecycleModule());
-    retVal.put("Cardiovascular Disease", new CardiovascularDiseaseModule());
-    retVal.put("Quality Of Life", new QualityOfLifeModule());
     retVal.put("Health Insurance", new HealthInsuranceModule());
 
     try {

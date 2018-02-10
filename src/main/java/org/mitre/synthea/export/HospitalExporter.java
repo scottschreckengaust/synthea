@@ -31,7 +31,7 @@ public abstract class HospitalExporter {
 
   private static final FhirContext FHIR_CTX = FhirContext.forDstu3();
 
-  private static final String SYNTHEA_URI = "http://synthetichealth.github.io/synthea/";
+  private static final String SYNTHEA_URI = "http://scottschreckengaust.github.io/synthea/";
 
   public static void export(long stop) {
     if (Boolean.parseBoolean(Config.get("exporter.hospital.fhir.export"))) {
@@ -71,7 +71,7 @@ public abstract class HospitalExporter {
   public static void addHospitalToBundle(Hospital h, Bundle bundle) {
     Organization organizationResource = new Organization();
 
-    organizationResource.addIdentifier().setSystem("https://github.com/synthetichealth/synthea")
+    organizationResource.addIdentifier().setSystem("https://github.com/scottschreckengaust/synthea")
         .setValue((String) h.getResourceID());
 
     Map<String, Object> hospitalAttributes = h.getAttributes();
